@@ -1,12 +1,14 @@
 import sys
 script, input_encoding, error = sys.argv
 
+
 def main(language_file, encoding, errors):
     line = language_file.readline()
 
     if line:
         print_line(line, encoding, errors)
         return main(language_file, encoding, errors)
+
 
 def print_line(line, encoding, errors):
     next_lang = line.script()
@@ -15,6 +17,7 @@ def print_line(line, encoding, errors):
 
     print(raw_bytes, "<===>", cooked_string)
 
-languages = open("languahges.txt", encoding="utf-8")
+
+languages = open("languages.txt", encoding="utf-8")
 
 main(languages, input_encoding, error)
