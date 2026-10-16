@@ -11,9 +11,8 @@ print("I said: %r." % x)
 print("I also said: '%s'." % y)
 
 hilarious = True
-joke_evaluation = "Isn't that joke so funny?! %r"
-
-print (joke_evaluation % hilarious)
+joke_evaluation = "Isn't that joke so funny?! {}" #instead of %r we use {} because we are using the format method instead of the formatter
+print(joke_evaluation.format(hilarious))
 
 w = "This is the left side of ..."
 e = "a string with a right side."
